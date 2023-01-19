@@ -19,6 +19,7 @@ nav{
     padding-left: 8%;
     padding-right: 8%;
 }
+
 .logo{
     color: white;
     font-size: 30px;
@@ -32,13 +33,13 @@ span{
 nav ul li{
     list-style-type: none;
     display: inline-block;
-padding: 10px 15px;
+    padding: 10px 15px;
 }
 nav ul li a{
     color: white;
     text-decoration: none;
-font-weight: bold;
-text-transform: capitalize;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 nav ul li a:hover{
     color:#f9004d;
@@ -62,6 +63,19 @@ transition: .4s;
     top: 80%;
     left: 8%;
     transform: translateY(-50%);
+    animation-name: slide-in;
+    animation-duration: 1s;
+    animation: fade-in 1s ease-in-out;
+}
+@keyframes fade-in{
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(-100px);
+        opacity: 1;
+    }
 }
 h1{
     color: white;
@@ -91,7 +105,7 @@ border: 2px solid #f9004d;
 outline: none;
 border-radius: 30px;
 }
-.newslatter form input:last-child{
+#start{
     position: absolute;
     display: inline-block;
     outline: none;
@@ -104,6 +118,11 @@ box-shadow: 0px 0px 5px #000, 0px 0px  5px #858585;
 top: 2.5px;
 right: 2px;
 }
+#start:hover{
+    background-color:black;
+    border: 2px solid #f9004d;
+cursor: pointer;
+}
 .about{
     width: 100%;
     padding: 100px 0;
@@ -111,13 +130,17 @@ right: 2px;
 }
 .about img{
     height: 400px;
-    width: 550px;
+    width: 550px;  background-color: transparent;
+    border: 2px solid #f9004d;
+cursor: pointer;
 }
+
 .about-text{
     width: 550px;
 }
 .main{
     width: 1130px;
+    position: relative;
     max-width: 95%;
     margin: 0 auto;
 display: flex;
